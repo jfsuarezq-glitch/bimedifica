@@ -1,12 +1,3 @@
-const root = document.documentElement;
-const themeToggle = document.getElementById('themeToggle');
-function applyTheme(t){root.setAttribute('data-theme',t);localStorage.setItem('bim-theme',t);}
-const saved = localStorage.getItem('bim-theme');
-const sysPref = window.matchMedia('(prefers-color-scheme:light)').matches;
-applyTheme(saved||(sysPref?'light':'dark'));
-themeToggle.addEventListener('click',()=>{
-  applyTheme(root.getAttribute('data-theme')==='dark'?'light':'dark');
-});
 const burger = document.getElementById('navBurger');
 const navLinks = document.getElementById('navLinks');
 burger.addEventListener('click',()=>{
