@@ -1,3 +1,7 @@
+document.querySelectorAll('a[href="#top"]').forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  window.scrollTo({top:0,behavior:'smooth'});
+}));
 const burger = document.getElementById('navBurger');
 const navLinks = document.getElementById('navLinks');
 burger.addEventListener('click',()=>{
