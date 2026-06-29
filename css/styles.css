@@ -106,7 +106,9 @@ section{padding:clamp(4rem,9vw,7.5rem) 1.5rem;}
 .pillar h3{font-size:1rem;font-weight:700;margin-bottom:.25rem;}
 .pillar p{font-size:.88rem;color:var(--text-muted);}
 /* SERVICES */
-.services__grid{max-width:var(--container);margin-inline:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+.services{padding-top:6rem;padding-bottom:clamp(1.5rem,4vw,2.5rem);}
+.services .section-head{margin-bottom:1.8rem;}
+.services__grid{max-width:var(--container);margin-inline:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;}
 .service-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.8rem;transition:border-color .25s,transform .25s;}
 .service-card:hover{border-color:var(--accent);transform:translateY(-4px);}
 .service-card__icon{font-size:1.8rem;margin-bottom:1.1rem;display:block;}
