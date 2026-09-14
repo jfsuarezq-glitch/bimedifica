@@ -16,3 +16,16 @@ const obs = new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');obs.unobserve(e.target);}}); 
 },{threshold:.12});
 reveals.forEach(el=>obs.observe(el));
+
+// Visor de imagenes de proyecto
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightboxImg');
+const closeLb = () => { lb.hidden = true; document.body.style.overflow = ''; };
+document.querySelectorAll('.project-card__header--img').forEach(h => h.addEventListener('click', () => {
+  const img = h.querySelector('img');
+  lbImg.src = img.src; lbImg.alt = img.alt;
+  lb.hidden = false; document.body.style.overflow = 'hidden';
+}));
+document.getElementById('lightboxClose').addEventListener('click', closeLb);
+lb.addEventListener('click', e => { if (e.target !== lbImg) closeLb(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
