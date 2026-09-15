@@ -50,6 +50,7 @@ section{padding:clamp(4rem,9vw,7.5rem) 1.5rem;}
 .nav__links{display:flex;gap:2rem;}
 .nav__links a{font-family:var(--font-head);font-size:.88rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;transition:color .2s;}
 .nav__links a:hover{color:var(--accent-deep);}
+.nav__links a.is-active{color:var(--accent-deep);}
 .nav__actions{display:flex;align-items:center;gap:.9rem;}
 .nav__burger{display:none;flex-direction:column;gap:4px;width:24px;background:none;border:none;cursor:pointer;}
 .nav__burger span{height:2px;background:var(--text);border-radius:2px;}
